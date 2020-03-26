@@ -16,6 +16,15 @@ EDK2_PLATFORM=MCIMX8M_EVK_4GB
 OPTEE_PLATFORM=mx8mqevk
 endif
 
+ifeq ($(IMX8_TARGET),MaaxBoard_iMX8M_2GB)
+U_BOOT_CONFIG=em_sbc_imx8m_nt_defconfig
+U_BOOT_DTS=em-sbc-imx8m
+U_BOOT_SOC=iMX8M
+ATF_CONFIG=imx8mq
+EDK2_PLATFORM=MaaxBoard_iMX8M_2GB
+OPTEE_PLATFORM=mx8mqemsbc
+endif
+
 ifeq ($(IMX8_TARGET),NXPEVK_iMX8M_Mini_2GB)
 U_BOOT_CONFIG=imx8mm_evk_nt_defconfig
 U_BOOT_DTS=fsl-imx8mm-evk
