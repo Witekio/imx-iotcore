@@ -55,6 +55,7 @@ Windows 10 IoT Core for NXP i.MX Processors
 |i.MX 8M | NXP | i.MX 8M EVK | NXPEVK_IMX8M_4GB |
 |i.MX 8M Mini | NXP | i.MX 8M Mini EVK | NXPEVK_IMX8M_Mini_2GB |
 |i.MX 8M | AVNET | MaaxBoard  | MaaxBoard_iMX8M_2GB |
+|i.MX 8M | Embest | EM-MC-SBC iMX8M  | EMMCSBC_iMX8M_2GB |
 
 A table of the currently enabled features for each board can be found [here](Documentation/board-feature-list.md). For hardware issues, please contact the hardware vendor.
 
