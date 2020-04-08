@@ -1,34 +1,11 @@
 # IoT Core NXP BSP Repository Support Notice
 
-Recently, NXP released the BSP for the iMX6, iMX7 and iMX8 processors for Windows 10 IoT. Their web page where both the BSP and documentation can be downloaded is [here](https://www.nxp.com/design/software/embedded-software/windows-10-iot-core-for-i.mx-applications-processors:IMXWIN10IOT). Any future support for the BSP will done in NXP's [community forums](https://community.nxp.com/community/imx/content?filterID=contentstatus%5Bpublished%5D%7Ecategory%5Bwindows%5D). Any open issues will not be transferred and must be reopened on NXP's support forums.
+This repository is maintained by **Witekio** to support the Avnet Maaxboard and Embest EM-MC-SBC platforms within the official Microsoft and NXP repository.
 
-The following repositories will be archived and made read-only on GitHub on November 8th. If you have a fork of any of these repositories they will remain active, but no new updates will be supplied by Microsoft. Development will stop in these repositories and all future work will be released by NXP in their BSP.
+Recently, NXP released the BSP for the iMX6, iMX7 and iMX8 processors for Windows 10 IoT. Their web page where both the BSP and documentation can be downloaded is [here](https://www.nxp.com/design/software/embedded-software/windows-10-iot-core-for-i.mx-applications-processors:IMXWIN10IOT).
 
-The repositories to be archived are:
-https://github.com/ms-iot/imx-iotcore
-https://github.com/ms-iot/u-boot
-https://github.com/ms-iot/optee_os
-https://github.com/ms-iot/imx-edk2-platforms
-https://github.com/ms-iot/edk2
-https://github.com/ms-iot/mu_platform_nxp
-https://github.com/ms-iot/mu_silicon_nxp
 
-The NXP BSP only has board support for NXP EVK and Sabre devices. For other devices you will need to contact the manufacturer for further support.
-
-Windows 10 IoT Core for NXP i.MX Processors
-==============
-| Component | Build Status |
-|-----|-----|
-| U-Boot Firmware | [![Build Status](https://microsoft.visualstudio.com/IOT/_apis/build/status/NXP/NXP-U-Boot%20Firmware%20CI?branchName=u-boot-imx)](https://microsoft.visualstudio.com/IOT/_build/latest?definitionId=39257&branchName=u-boot-imx)|
-| OP-TEE Firmware | [![Build Status](https://microsoft.visualstudio.com/IOT/_apis/build/status/NXP/NXP-OP-TEE%20Firmware%20CI?branchName=ms-iot)](https://microsoft.visualstudio.com/IOT/_build/latest?definitionId=39229&branchName=ms-iot)|
-| Security TAs | [![Build Status](https://dev.azure.com/msresearch/MSRSec/_apis/build/status/MSRSec-CI?branchName=master)](https://dev.azure.com/msresearch/MSRSec/_build/latest?definitionId=1447&branchName=master) |
-| Security TA Test | [![Build Status](https://microsoft.visualstudio.com/IOT/_apis/build/status/NXP/NXP-Security%20TA%20QEMU%20Testing?branchName=master)](https://microsoft.visualstudio.com/IOT/_build/latest?definitionId=42972&branchName=master)|
-| EDK2 Firmware | [![Build Status](https://microsoft.visualstudio.com/IOT/_apis/build/status/NXP/NXP-EDK2%20Firmware%20CI?branchName=imx)](https://microsoft.visualstudio.com/IOT/_build/latest?definitionId=38657&branchName=imx)|
-| MU Firmware | [![Build Status](https://dev.azure.com/microsoft/IOT/_apis/build/status/NXP/NXP-MU%20CI?branchName=master)](https://dev.azure.com/microsoft/IOT/_build/latest?definitionId=42775&branchName=master) |
-| All Firmware | [![Build Status](https://dev.azure.com/microsoft/IOT/_apis/build/status/NXP/Firmware%20CI?branchName=public_preview)](https://dev.azure.com/microsoft/IOT/_build/latest?definitionId=38649&branchName=public_preview)|
-| Latest Firmware FFU | [![Build Status](https://microsoft.visualstudio.com/IOT/_apis/build/status/NXP/NXP-Latest%20Firmware%20FFU?branchName=public_preview)](https://microsoft.visualstudio.com/IOT/_build/latest?definitionId=43820&branchName=public_preview) |
-| Stable FFU | [![Build Status](https://microsoft.visualstudio.com/IOT/_apis/build/status/NXP/NXP-BuildFFU?branchName=public_preview)](https://microsoft.visualstudio.com/IOT/_build/latest?definitionId=41026&branchName=public_preview) |
-
+# Windows 10 IoT Core for NXP i.MX Processors
 
 **Important! Please read this section first.**
 
@@ -36,7 +13,7 @@ Windows 10 IoT Core for NXP i.MX Processors
 
 **This code is available under the [MIT](LICENSE) license except where stated otherwise such as the imxnetmini driver and OpteeClientLib.**
 
-## Board List
+# Board List
 
 | SoC Type | Board Vendor | Board Name | Board Package Name|
 |-----|-----|-----|-----|
@@ -54,20 +31,22 @@ Windows 10 IoT Core for NXP i.MX Processors
 |i.MX 7Dual | NXP | i.MX 7Dual SABRE | Sabre_iMX7D_1GB |
 |i.MX 8M | NXP | i.MX 8M EVK | NXPEVK_IMX8M_4GB |
 |i.MX 8M Mini | NXP | i.MX 8M Mini EVK | NXPEVK_IMX8M_Mini_2GB |
-|i.MX 8M | AVNET | MaaxBoard  | MaaxBoard_iMX8M_2GB |
-|i.MX 8M | Embest | EM-MC-SBC iMX8M  | EMMCSBC_iMX8M_2GB |
+|**i.MX 8M** | **AVNET** | **MaaxBoard**  | **MaaxBoard_iMX8M_2GB** |
+|**i.MX 8M** | **Embest** | **EM-MC-SBC** | **EMMCSBC_iMX8M_2GB** |
+
+**Bold** entries are platforms currently supported and maintained by **Witekio**
 
 A table of the currently enabled features for each board can be found [here](Documentation/board-feature-list.md). For hardware issues, please contact the hardware vendor.
 
-## Building the BSP
+# Getting Ready
 
-### Cloning the Repository
+## Cloning the Repository
 This repository uses submodules and should be cloned with `git clone --recurse-submodules`
 
-### Required Tools
+## Required Tools
 The following tools are required to build the driver packages and IoT Core FFU: Visual Studio 2017, Windows Kits (ADK/SDK/WDK), and the IoT Core OS Packages.
 
-#### Visual Studio 2017
+### Visual Studio 2017
 * Make sure that you **install Visual Studio 2017 before the WDK** so that the WDK can install a required plugin.
 * Download [Visual Studio 2017](https://docs.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads#step-1-install-visual-studio).
 * During install select **Desktop development with C++**.
@@ -85,12 +64,12 @@ The following tools are required to build the driver packages and IoT Core FFU: 
   * Make sure that you allow the Visual Studio Extension to install after the WDK install completes.
 * If the WDK installer says it could not find the correct SDK version, install [SDK version 1809](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
 
-#### IoT Core OS Packages
+### IoT Core OS Packages
 * Visit the [Windows IoT Core Downloads](https://www.microsoft.com/en-us/software-download/windows10IoTCore#!) page and download "Windows 10 IoT Core Packages – Windows 10 IoT Core, version 1809 (LTSC)".
 * Open the iso and install ```Windows_10_IoT_Core_ARM_Packages.msi```
 * Install ```Windows_10_IoT_Core_ARM64_Packages.msi``` for ARM64 builds.
 
-### One-Time Environment Setup
+## One-Time Environment Setup
 Test certificates must be installed to generate driver packages on a development machine.
 1. Open an Administrator Command Prompt.
 2. Navigate to your newly cloned repo and into the folder `imx-iotcore\build\tools`.
@@ -102,7 +81,7 @@ Test certificates must be installed to generate driver packages on a development
     git submodule update
     ```
 
-### FFU Generation
+# FFU Generation
 
 1. Launch Visual Studio 2017 as Administrator.
 2. Open the solution iMXPlatform.sln (imx-iotcore\build\solution\iMXPlatform).
@@ -112,80 +91,42 @@ Test certificates must be installed to generate driver packages on a development
 6. After a successful build the new FFU will be located in `imx-iotcore\build\solution\iMXPlatform\Build\FFU\HummingBoardEdge_iMX6Q_2GB\` for ARM builds and `imx-iotcore\build\solution\iMXPlatform\Build\FFU\NXPEVK_iMX8M_4GB` for ARM64 builds.
 7. The FFU contains firmware components for the HummingBoard Edge with the Quad Core SOM or NXP IMX8M EVK with i.MX8M Quad Core SOM depending on build flavor. This firmware is automatically applied to the SD Card during the FFU imaging process.
 
-#### Building the FFU for other boards
-In order to build an FFU for another board you'll need to modify GenerateFFU.bat in the Build Scripts folder of the Solution Explorer. Comment out the default HummingBoardEdge_iMX6Q_2GB or NXPEVK_iMX8M_4GB builds with REM and uncomment any other boards you want to build.
+## Building the FFU for other boards
+In order to build an FFU for another board you'll need to modify GenerateFFU.bat in the Build Scripts folder of the Solution Explorer. Comment out the default HummingBoardEdge_iMX6Q_2GB or MaaxBoard_iMX8M_2GB builds with REM and uncomment any other boards you want to build.
 ```bat
 REM cd /d %BATCH_HOME%
-REM echo "Building HummingBoardEdge_iMX6Q_2GB FFU"
-REM call BuildImage HummingBoardEdge_iMX6Q_2GB HummingBoardEdge_iMX6Q_2GB_TestOEMInput.xml
+REM echo "Building MaaxBoard_iMX8M_2GB FFU"
+REM call BuildImage MaaxBoard_iMX8M_2GB MaaxBoard_iMX8M_2GB_TestOEMInput.xml
 
 cd /d %BATCH_HOME%
-echo "Building Sabre_iMX6Q_1GB FFU"
-call BuildImage Sabre_iMX6Q_1GB Sabre_iMX6Q_1GB_TestOEMInput.xml
+echo "Building EMMCSBC_iMX8M_2GB FFU"
+call BuildImage EMMCSBC_iMX8M_2GB EMMCSBC_iMX8M_2GB_TestOEMInput.xml
 ```
 
-### Deploy the FFU
+## Installing to an SD Card
  - Follow the instructions in the [IoT Core Manufacturing Guide](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/create-a-basic-image#span-idflashanimagespanflash-the-image-to-a-memory-card) to flash the FFU to an SD Card using the Windows IoT Core Dashboard.
 
-### Installing to an eMMC
+## Installing to an eMMC
  - Follow the instructions in the [Booting WinPE and Flashing eMMC](Documentation/winpe-mmc.md) document.
 
-### Adding a New Board
- - Follow the instructions in the [Adding a New Board](Documentation/newboard.md) document.
-
-### Adding a New Driver
+## Adding a New Driver
  - Follow the instructions in the [Adding a New Driver](Documentation/adding-drivers.md) document.
 
-### Building the FFU with the IoT ADK AddonKit
+## Building the FFU with the IoT ADK AddonKit
 1. Build the GenerateBSP project to create a BSP folder in the root of the repository.
 2. Clone the [IoT ADK AddonKit](https://github.com/ms-iot/iot-adk-addonkit).
 3. Follow the [Create a basic image instructions](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/create-a-basic-image) from the IoT Core Manufacturing guide with the following changes.
 * When importing a BSP use one of the board names from the newly generated BSP folder in the imx-iotcore repo.
     ```
-    Import-IoTBSP HummingBoardEdge_iMX6Q_2GB <Path to imx-iotcore\BSP>
+    Import-IoTBSP MaaxBoard_iMX8M_2GB <Path to imx-iotcore\BSP>
     ```
 * When creating a product use the same board name from the BSP import.
     ```
-    Add-IoTProduct ProductA HummingBoardEdge_iMX6Q_2GB
+    Add-IoTProduct ProductA MaaxBoard_iMX8M_2GB
     ```
 
 
-# Building Firmware from Source
-
-Building custom firmware into an FFU requires additional steps:
-
-* [Building and Updating Firmware for ARM](Documentation/build-firmware.md)
-* [Building and Updating Firmware for ARM64](Documentation/build-arm64-firmware.md)
-* [Firmware Boot Documentation](Documentation/boot.md)
-* [Firmware Signing Documentation for ARM](Documentation/signing-firmware.md)
-* [Testing your BSP](Documentation/tests.md)
-* [Creating Windows PE images and booting from eMMC](Documentation/winpe-mmc.md)
-
-The firmware code can be found in the following repos:
-
-![Repository Dependency Graph](Documentation/repository_graph.png)
-
-* U-Boot: https://github.com/ms-iot/u-boot.git
-* OP-TEE: https://github.com/ms-iot/optee_os.git
-* UEFI for ARM:
-  * https://github.com/tianocore/edk2.git
-  * https://github.com/ms-iot/imx-edk2-platforms.git
-* UEFI for ARM64:
-  * https://github.com/ms-iot/MU_PLATFORM_NXP.git
-  * https://github.com/ms-iot/MU_SILICON_NXP.git
-  * https://github.com/Microsoft/mu_basecore.git
-  * https://github.com/Microsoft/mu_plus.git
-  * https://github.com/Microsoft/mu_silicon_arm_tiano.git
-  * https://github.com/Microsoft/mu_tiano_plus.git
-  * https://github.com/openssl/openssl
-* Arm Trusted Firmware for ARM64:
-  * https://source.codeaurora.org/external/imx/imx-atf
-* IMX MkImage for ARM64:
-  * https://source.codeaurora.org/external/imx/imx-mkimage
-* Firmware TPM2.0:
-  * https://github.com/Microsoft/ms-tpm-20-ref
-
-### Directories
+# Directories
 
 BSP - Generated at build time. Contains Board Support Packages for the [IoT ADK AddonKit](https://github.com/ms-iot/iot-adk-addonkit).
 
@@ -197,9 +138,9 @@ documentation - Contains usage documentation.
 
 hal - Contains hal extension sources.
 
-## Info
+# Info
 
-For more information about Windows 10 IoT Core, see our online documentation [here](http://windowsondevices.com)
+For more information about Windows 10 IoT Core, see Microsoft online documentation [here](http://windowsondevices.com)
 
 We are working hard to improve Windows 10 IoT Core and deeply value any feedback we get.
 
